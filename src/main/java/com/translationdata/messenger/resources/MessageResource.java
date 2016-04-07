@@ -15,14 +15,14 @@ import com.translationdata.messenger.service.MessageService;
 public class MessageResource {
 	MessageService messageService = new MessageService();
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	public List<Message> getMessages() {
 		return messageService.getAllMessages();
 	}
 	
 	@Path("/{messageId}")
 	@GET
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	// Jersey will cast the String to long...
 	public Message getMessage(@PathParam("messageId") long id) {
 		return messageService.getMessage(id);
