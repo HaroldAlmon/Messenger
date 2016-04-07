@@ -2,6 +2,7 @@ package com.translationdata.messenger.resources;
 
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -24,9 +25,10 @@ public class MessageResource {
 	}
 	
 	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public String postMessage() {
-		return "Post works!";
+	public Message postMessage(Message message) {
+		return messageService.addMessage(message);
 	}
 	
 	@Path("/{messageId}")
