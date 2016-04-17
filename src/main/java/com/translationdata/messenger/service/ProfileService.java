@@ -18,9 +18,9 @@ public class ProfileService {
 		return profiles.get(name);
 	}
 	
-	public Profile addProfile(String name, Profile profile) {
+	public Profile addProfile(Profile profile) {
 		profile.setId(profiles.size() + 1);
-		profiles.put(name, profile);
+		profiles.put(profile.getProfileName(), profile);
 		return profile;
 	}
 	

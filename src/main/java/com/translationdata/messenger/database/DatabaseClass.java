@@ -15,8 +15,8 @@ public class DatabaseClass {
 	};
 	private static Map<String, Profile> profiles = new HashMap() {
 		{
-			this.put(1L, new Profile(1, "harold", "Harold", "Almon"));
-			this.put(1L, new Profile(1, "harold", "Jack", "Smith"));
+			this.put("harold", new Profile(1, "harold", "Harold", "Almon"));
+			this.put("jack", new Profile(2, "jack", "Jack", "Smith"));
 		}
 	};
 	
