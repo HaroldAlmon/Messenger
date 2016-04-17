@@ -3,6 +3,7 @@ package com.translationdata.messenger.resources;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -31,17 +32,23 @@ public class MessageResource {
 		return messageService.addMessage(message);
 	}
 	
-	@Path("/{messageId}")
 	@PUT
+	@Path("/{messageId}")
 	public Message updateMessage(@PathParam("messageId") long id, Message message) {
 		message.setId(id);
 		return messageService.updateMessage(message);
 	}
 	
-	@Path("/{messageId}")
 	@GET
+	@Path("/{messageId}")
 	// Jersey will cast the String to long...
 	public Message getMessage(@PathParam("messageId") long id) {
 		return messageService.getMessage(id);
+	}
+	
+	@DELETE
+	@Path("/{messageId}")
+	public void deleteMessage(@PathParam("messageId") long id) {
+		messageService.removeMessage(id);
 	}
 }
