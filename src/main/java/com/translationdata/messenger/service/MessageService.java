@@ -9,11 +9,14 @@ import com.translationdata.messenger.model.Message;
 
 public class MessageService {
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
-	
-	public MessageService() {
+
+// This gets executes on every HTTP request so it never remembers changes to the data...
+/*	public MessageService() {
+		{
 		messages.put(1L, new Message(1, "Hello Java", "Almon"));
 		messages.put(2L, new Message(2, "Hello Jersey", "Almon"));
-	}
+		}
+	}*/
 	
 	public List<Message> getAllMessages() {
 				
