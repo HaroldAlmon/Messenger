@@ -1,6 +1,7 @@
 package com.translationdata.messenger.service;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
 
@@ -45,4 +46,18 @@ public class MessageService {
 	public void removeMessage(long id) {
 		messages.remove(id);
 	}
+	
+	public List<Message> getAllMessagesForYear(int year) {
+		List<Message> messagesForYear = new ArrayList<>();
+		Calendar cal = Calendar.getInstance();
+		for(Message message : messages.values()) {
+			cal.setTime(message.getCreated());
+			if(cal.get(Calendar.YEAR) == year) {
+				messagesForYear.add(message);
+			}
+		}
+		return messagesForYear;
+	}
+	
+	
 }
