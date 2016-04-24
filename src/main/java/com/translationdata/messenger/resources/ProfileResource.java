@@ -32,7 +32,8 @@ public class ProfileResource {
 	
 	@PUT
 	@Path("/{profileName}")
-	public Profile updateMessage(@PathParam("profileName") String name, Profile profile) {
+	public Profile updateMessage(@PathParam("profileName") String name, 
+								 Profile profile) {
 		profile.setId(profile.getId());
 		return profileService.updateProfile(profile);
 	}

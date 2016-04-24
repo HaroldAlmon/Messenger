@@ -43,7 +43,8 @@ public class MessageResource {
 	
 	@PUT
 	@Path("/{messageId}")
-	public Message updateMessage(@PathParam("messageId") long id, Message message) {
+	public Message updateMessage(@PathParam("messageId") long id, 
+								 Message message) {
 		message.setId(id);
 		return messageService.updateMessage(message);
 	}

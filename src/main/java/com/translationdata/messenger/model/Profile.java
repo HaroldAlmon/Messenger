@@ -13,9 +13,9 @@ public class Profile {
 	
 	public Profile() {};
 	public Profile(long id,
-			String profileName,
-			String firstName,
-			String lastName) {
+				   String profileName,
+				   String firstName,
+				   String lastName) {
 		this.id = id;
 		this.profileName = profileName;
 		this.firstName = firstName;
