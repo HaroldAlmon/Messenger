@@ -18,7 +18,7 @@ import com.translationdata.messenger.model.Message;
 import com.translationdata.messenger.resources.beans.MessageFilterBean;
 import com.translationdata.messenger.service.MessageService;
 
-// Maps to http://localhost:8080/Messenger/webapi/messages, case sensitive application name.
+// Maps to http://localhost:8080/messenger/webapi/messages.
 @Path("/messages")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
