@@ -8,6 +8,7 @@ import java.util.Map;
 import com.translationdata.messenger.database.DatabaseClass;
 import com.translationdata.messenger.model.Message;
 
+// http://localhost:8080/messenger/webapi/messages
 public class MessageService {
 	private Map<Long, Message> messages = DatabaseClass.getMessages();
 
