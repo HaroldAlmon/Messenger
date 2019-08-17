@@ -6,6 +6,7 @@ import javax.ws.rs.PathParam;
 
 @Path("/")
 public class CommentResource {
+	// http://localhost:8080/messenger/webapi/
 	@GET
 	public String getComments(@PathParam("messageId") long messageId) {
 		return "All comments, Message Id = " + messageId;
