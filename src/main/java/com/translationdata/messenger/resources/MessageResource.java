@@ -45,6 +45,8 @@ public class MessageResource {
 				.build();
 	}
 	
+	// http://localhost:8080/messenger/webapi/messages/1
+	// or http://localhost:8080/messenger/webapi/messages/2
 	@PUT
 	@Path("/{messageId}")
 	public Message updateMessage(@PathParam("messageId") long id, 

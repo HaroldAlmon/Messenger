@@ -12,11 +12,18 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriInfo;
 
-@Path("parameter")
 @Consumes(MediaType.TEXT_PLAIN)
 @Produces(MediaType.TEXT_PLAIN)
 
+@Path("parameter")
 public class ParameterResource {
+	// http://localhost:8080/messenger/webapi/parameter
+	@GET
+	public String getParams() {
+		return ("getParams() called");
+	}
+	
+	// http://localhost:8080/messenger/webapi/parameter/annotations
 	@GET
 	@Path("/annotations")
 	public String getParamsUsingAnnotations(@MatrixParam("size") int size,
